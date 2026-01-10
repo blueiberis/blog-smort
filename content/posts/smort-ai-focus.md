@@ -1,7 +1,6 @@
 ---
 title: "SMORT: The AI That Helps Teams Focus, Not Distract Them"
-type: "post"
-date: 2026-01-09T10:00:00Z
+date: 2026-01-01
 author: "Manikandan Pazhani"
 categories: ["Productivity", "AI Tools", "Slack"]
 tags: ["AI", "Slack", "Team Productivity", "Knowledge Management"]

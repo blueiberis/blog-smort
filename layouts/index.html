@@ -12,12 +12,13 @@
 <section id="posts" class="container mx-auto px-6 py-16">
     <h2 class="text-3xl font-bold mb-8 text-center text-brand-dark">Latest Posts</h2>
     <div class="grid md:grid-cols-3 gap-8">
-        {{ range first 6 .Pages }}
+        {{ $posts := where .Site.RegularPages "Section" "posts" }}
+        {{ range first 6 (sort $posts "Date" "desc") }}
         <div class="bg-brand-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
             {{ with .Params.featured_image }}
             <img src="{{ . }}" alt="{{ $.Title }}" class="w-full h-48 object-cover">
             {{ else }}
-            <img src="https://via.placeholder.com/400x200" alt="{{ .Title }}" class="w-full h-48 object-cover">
+            <img src="/images/posts/default-thumbnail.png" alt="{{ .Title }}" class="w-full h-48 object-cover">
             {{ end }}
             <div class="p-6">
                 <h3 class="text-xl font-bold mb-2 hover:text-brand-blue cursor-pointer">

@@ -2,9 +2,10 @@
 title: "SMORT: The AI That Helps Teams Focus, Not Distract Them"
 type: "post"
 date: 2026-01-09T10:00:00Z
-author: "The SMORT Team"
+author: "Manikandan Pazhani"
 categories: ["Productivity", "AI Tools", "Slack"]
 tags: ["AI", "Slack", "Team Productivity", "Knowledge Management"]
+featured_image: "/images/posts/smort-ai-focus.png"
 draft: false
 ---
 

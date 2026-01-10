@@ -30,6 +30,13 @@
       </p>
     {{ end }}
 
+    <!-- Author -->
+    {{ with .Params.author }}
+      <div class="text-sm sm:text-base font-semibold text-brand-white mb-2">
+        By {{ . }}
+      </div>
+    {{ end }}
+
     <!-- Date & Reading Time -->
     <div class="text-xs sm:text-sm text-brand-light">
       <span>Published {{ .Date.Format "January 2, 2006" }}</span>

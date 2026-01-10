@@ -1,8 +1,110 @@
 {{ define "main" }}
-<article class="max-w-3xl mx-auto p-6">
-  <h1 class="text-4xl font-bold text-brand-blue mb-4">{{ .Title }}</h1>
-  <div class="prose prose-brand">
-    {{ .Content }}
+
+<!-- Post Header -->
+<section class="bg-brand-blue text-brand-white">
+  <div class="container mx-auto px-6 py-16 max-w-4xl text-center">
+
+    {{ with .Params.categories }}
+      <div class="mb-4">
+        {{ range . }}
+          <a
+            href="{{ "/categories/" | relURL }}{{ . | urlize }}"
+            class="inline-block bg-brand-accent text-brand-dark text-sm font-semibold px-3 py-1 rounded-full mr-2 mb-2"
+          >
+            {{ . }}
+          </a>
+        {{ end }}
+      </div>
+    {{ end }}
+
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">
+      {{ .Title }}
+    </h1>
+
+    {{ with .Description }}
+      <p class="text-lg md:text-xl mb-6">
+        {{ . | safeHTML }}
+      </p>
+    {{ end }}
+
+    <div class="text-sm text-brand-light">
+      <span>Published {{ .Date.Format "January 2, 2006" }}</span>
+      {{ with .ReadingTime }}
+        · <span>{{ . }} min read</span>
+      {{ end }}
+    </div>
+
   </div>
-</article>
+</section>
+
+<!-- Featured Image -->
+{{ with .Params.featured_image }}
+<section class="container mx-auto px-6 -mt-20 max-w-5xl">
+  <img
+    src="{{ . }}"
+    alt="{{ $.Title }}"
+    class="w-full h-[420px] object-cover rounded-lg shadow-lg"
+  >
+</section>
+{{ end }}
+
+<!-- Post Content -->
+<section class="container mx-auto px-6 py-16 max-w-3xl">
+  <article
+    class="prose prose-lg max-w-none
+           prose-headings:text-brand-dark
+           prose-a:text-brand-blue
+           prose-strong:text-brand-dark"
+  >
+    {{ .Content }}
+  </article>
+</section>
+
+<!-- Post Footer -->
+<section class="bg-brand-light">
+  <div class="container mx-auto px-6 py-12 max-w-3xl">
+
+    <!-- Tags -->
+    {{ with .Params.tags }}
+      <div class="mb-6">
+        <h3 class="text-sm font-bold uppercase tracking-wide text-gray-600 mb-2">
+          Tags
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          {{ range . }}
+            <a
+              href="{{ "/tags/" | relURL }}{{ . | urlize }}"
+              class="bg-brand-white text-sm px-3 py-1 rounded-full hover:bg-brand-mustard transition"
+            >
+              {{ . }}
+            </a>
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+
+    <!-- Navigation -->
+    <div class="flex justify-between items-center mt-10 text-sm font-semibold">
+      {{ with .PrevInSection }}
+        <a
+          href="{{ .RelPermalink }}"
+          class="text-brand-blue hover:underline"
+        >
+          ← {{ .Title }}
+        </a>
+      {{ end }}
+
+      {{ with .NextInSection }}
+        <a
+          href="{{ .RelPermalink }}"
+          class="text-brand-blue hover:underline ml-auto"
+        >
+          {{ .Title }} →
+        </a>
+      {{ end }}
+    </div>
+
+  </div>
+</section>
+
 {{ end }}

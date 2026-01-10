@@ -1,16 +1,84 @@
 {{ define "main" }}
-<div class="max-w-3xl mx-auto p-6 space-y-6">
-  <h1 class="text-4xl font-bold text-brand-blue mb-4">{{ .Title }}</h1>
 
-  <ul class="space-y-4">
-    {{ range .Pages }}
-      <li class="border-l-4 border-brand-mustard pl-4 py-2">
-        <a href="{{ .RelPermalink }}" class="text-brand-accent font-semibold hover:underline">
-          {{ .Title }}
-        </a>
-        <p class="text-brand-dark text-sm">{{ .Date.Format "Jan 2, 2006" }}</p>
-      </li>
+<!-- Page Header -->
+<section class="bg-brand-blue text-brand-white">
+  <div class="container mx-auto px-6 py-16 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">
+      {{ .Title }}
+    </h1>
+
+    {{ with .Description }}
+      <p class="text-lg md:text-xl max-w-3xl mx-auto">
+        {{ . | safeHTML }}
+      </p>
     {{ end }}
-  </ul>
-</div>
+  </div>
+</section>
+
+<!-- Posts List -->
+<section class="container mx-auto px-6 py-16">
+  {{ if .Pages }}
+    <div class="grid md:grid-cols-3 gap-8">
+      {{ range .Pages.ByDate.Reverse }}
+        <article class="bg-brand-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+
+          {{ with .Params.featured_image }}
+            <img
+              src="{{ . }}"
+              alt="{{ $.Title }}"
+              class="w-full h-48 object-cover"
+            >
+          {{ else }}
+            <img
+              src="https://via.placeholder.com/400x200"
+              alt="{{ .Title }}"
+              class="w-full h-48 object-cover"
+            >
+          {{ end }}
+
+          <div class="p-6">
+            <h2 class="text-xl font-bold mb-2 hover:text-brand-blue">
+              <a href="{{ .RelPermalink }}">
+                {{ .Title }}
+              </a>
+            </h2>
+
+            <p class="text-gray-600 mb-4">
+              {{ .Summary | plainify | truncate 140 }}
+            </p>
+
+            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+              <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+
+              {{ with .Params.categories }}
+                <span>
+                  {{ range first 1 . }}
+                    <a
+                      href="{{ "/categories/" | relURL }}{{ . | urlize }}"
+                      class="text-brand-blue hover:underline"
+                    >
+                      {{ . }}
+                    </a>
+                  {{ end }}
+                </span>
+              {{ end }}
+            </div>
+
+            <a
+              href="{{ .RelPermalink }}"
+              class="text-brand-mustard font-semibold hover:underline"
+            >
+              Read More →
+            </a>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  {{ else }}
+    <p class="text-center text-gray-600">
+      No posts found.
+    </p>
+  {{ end }}
+</section>
+
 {{ end }}

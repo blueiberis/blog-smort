@@ -5,6 +5,7 @@
   <title>{{ .Title }}</title>
   {{ $styles := resources.Get "css/tailwind.css" | postCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $styles.Permalink }}">
+  <link rel="stylesheet" href="{{ "/styles.css" | relURL }}">
   {{ partial "head.html" . }}
 </head>
 <body class="bg-brand-light">

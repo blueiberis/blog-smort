@@ -1,0 +1,26 @@
+# Hugo generated files
+/public/
+/resources/_gen/
+/hugo_stats.json
+.hugo_build.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+.vscode/
+.idea/
+
+# Node / package manager (if using Hugo Pipes / npm)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Optional: backup files
+*~
+

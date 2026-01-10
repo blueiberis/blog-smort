@@ -1,0 +1,5 @@
+baseURL = "https://blog.smort.tech/"
+languageCode = "en-au"
+title = "Smort Blog"
+theme = "ananke"
+

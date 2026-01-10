@@ -2,3 +2,6 @@ baseURL = "https://blog.smort.tech/"
 relativeURLs = true
 languageCode = "en-au"
 title = "Smort Blog"
+
+[params]
+footerDescription = "Sharing knowledge, tutorials, and insights for tech enthusiasts and professionals."

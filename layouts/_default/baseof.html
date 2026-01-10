@@ -8,6 +8,12 @@
   {{ partial "head.html" . }}
 </head>
 <body class="bg-brand-light">
-  {{ block "main" . }}{{ end }}
+  {{ partial "header.html" . }}
+
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  {{ partial "footer.html" . }}
 </body>
 </html>

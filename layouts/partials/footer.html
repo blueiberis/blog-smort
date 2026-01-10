@@ -1,0 +1,46 @@
+
+<!-- Newsletter / Subscribe Section -->
+<section class="bg-brand-dark text-brand-white py-16">
+    <div id="subscribe" class="container mx-auto text-center px-6">
+        <h2 class="text-3xl font-bold mb-4">Subscribe to Our Newsletter</h2>
+        <p class="mb-6 text-brand-light">Get the latest posts delivered straight to your inbox.</p>
+        <form name="subscribe" method="POST" data-netlify="true" class="flex flex-col sm:flex-row justify-center gap-4 max-w-xl mx-auto">
+            <input type="email" name="email" placeholder="Your email address" required class="px-4 py-3 rounded w-full sm:flex-1 text-black">
+            <button type="submit" class="bg-brand-mustard text-brand-dark px-6 py-3 rounded font-semibold hover:bg-yellow-400 transition">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+<footer class="bg-brand-dark text-brand-white">
+  <div class="container mx-auto px-6 py-10 grid md:grid-cols-3 gap-8">
+
+    <div>
+      <h4 class="text-lg font-bold mb-4">{{ .Site.Title }}</h4>
+      <p>{{ .Site.Params.footerDescription }}</p>
+    </div>
+
+    <div>
+      <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+      <ul>
+        <li><a href="/" class="hover:text-brand-mustard">Home</a></li>
+        <li><a href="/categories" class="hover:text-brand-mustard">Categories</a></li>
+        <li><a href="https://www.smort.tech" target="_blank" class="hover:text-brand-mustard">Visit Website</a></li>
+        <li><a href="https://www.smort.tech/contact" target="_blank" class="hover:text-brand-mustard">Contact</a></li>
+      </ul>
+    </div>
+
+  <div>
+    <h4 class="text-lg font-bold mb-4">Follow Us</h4>
+    <ul>
+      <li><a href="https://twitter.com/yourprofile" target="_blank" class="hover:text-brand-mustard">Twitter</a></li>
+      <li><a href="https://github.com/yourprofile" target="_blank" class="hover:text-brand-mustard">GitHub</a></li>
+      <li><a href="https://linkedin.com/in/yourprofile" target="_blank" class="hover:text-brand-mustard">LinkedIn</a></li>
+    </ul>
+  </div>
+
+  </div>
+
+  <div class="text-center text-gray-400 mt-6 pb-6">
+    &copy; {{ now.Format "2006" }} {{ .Site.Title }}. All rights reserved.
+  </div>
+</footer>

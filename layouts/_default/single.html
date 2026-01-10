@@ -10,7 +10,7 @@
         {{ range . }}
           <a
             href="{{ "/categories/" | relURL }}{{ . | urlize }}"
-            class="inline-block bg-brand-accent text-brand-dark text-xs sm:text-sm font-semibold px-3 py-1 rounded-full"
+            class="inline-block bg-brand-accent text-brand-dark text-xs sm:text-sm font-semibold px-3 py-1 rounded-lg"
           >
             {{ . }}
           </a>
@@ -78,7 +78,7 @@
           {{ range . }}
             <a
               href="{{ "/tags/" | relURL }}{{ . | urlize }}"
-              class="bg-brand-white text-xs sm:text-sm px-3 py-1 rounded-full hover:bg-brand-mustard transition"
+              class="bg-brand-white text-xs sm:text-sm px-3 py-1 rounded-lg hover:bg-brand-mustard transition"
             >
               {{ . }}
             </a>

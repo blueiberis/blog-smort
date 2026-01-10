@@ -1,16 +1,45 @@
 <header class="bg-brand-white shadow">
   <div class="container mx-auto px-6 py-4 flex justify-between items-center">
 
+    <!-- Logo -->
     <a href="/" class="flex items-center space-x-3">
       <img src="/smort-logo-symbol.svg" alt="Smort.Tech Logo" style="width:120px;">
     </a>
 
-    <nav class="space-x-4">
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex space-x-4">
       <a href="/" class="text-brand-dark hover:text-brand-blue">Home</a>
       <a href="/posts" class="text-brand-dark hover:text-brand-blue">Posts</a>
       <a href="/categories" class="text-brand-dark hover:text-brand-blue">Categories</a>
       <a href="#subscribe" class="text-brand-dark hover:text-brand-blue">Subscribe</a>
     </nav>
 
+    <!-- Mobile menu button -->
+    <button id="menu-button" class="md:hidden text-brand-dark focus:outline-none">
+      <!-- Hamburger icon -->
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2">
+    <a href="/" class="block text-brand-dark hover:text-brand-blue">Home</a>
+    <a href="/posts" class="block text-brand-dark hover:text-brand-blue">Posts</a>
+    <a href="/categories" class="block text-brand-dark hover:text-brand-blue">Categories</a>
+    <a href="#subscribe" class="block text-brand-dark hover:text-brand-blue">Subscribe</a>
   </div>
 </header>
+
+<script>
+  // Toggle mobile menu
+  const btn = document.getElementById('menu-button');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>

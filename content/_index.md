@@ -1,5 +1,5 @@
-+++
-date = '2026-01-10T18:42:08+10:00'
-draft = true
-title = ''
-+++
+---
+title: "Smort Blog"
+description: "Your daily dose of tech insights, tutorials, and innovation."
+---
+Welcome to Smort.Tech! Explore tutorials, insights, and tech stories.

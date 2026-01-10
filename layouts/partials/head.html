@@ -11,3 +11,18 @@
   rel="stylesheet"
 />
 
+<!-- Page Title -->
+<title>
+    {{ if .Title }}
+        {{ .Title }} | {{ .Site.Title }}
+    {{ else }}
+        {{ .Site.Title }}
+    {{ end }}
+</title>
+
+<!-- Optional: Meta description for SEO -->
+{{ with .Params.description }}
+<meta name="description" content="{{ . }}">
+{{ else }}
+<meta name="description" content="{{ .Site.Params.description }}">
+{{ end }}

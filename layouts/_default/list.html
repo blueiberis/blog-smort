@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="max-w-3xl mx-auto p-6 space-y-6">
+  <h1 class="text-4xl font-bold text-brand-blue mb-4">{{ .Title }}</h1>
+
+  <ul class="space-y-4">
+    {{ range .Pages }}
+      <li class="border-l-4 border-brand-mustard pl-4 py-2">
+        <a href="{{ .RelPermalink }}" class="text-brand-accent font-semibold hover:underline">
+          {{ .Title }}
+        </a>
+        <p class="text-brand-dark text-sm">{{ .Date.Format "Jan 2, 2006" }}</p>
+      </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

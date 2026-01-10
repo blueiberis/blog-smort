@@ -2,5 +2,3 @@ baseURL = "https://blog.smort.tech/"
 relativeURLs = true
 languageCode = "en-au"
 title = "Smort Blog"
-theme = "ananke"
-

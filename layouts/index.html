@@ -1,0 +1,8 @@
+{{ define "main" }}
+<h1 class="text-4xl text-brand-blue font-sans p-6">Welcome to Smort Blog</h1>
+<ul class="p-6 space-y-2">
+  {{ range .Pages }}
+    <li><a href="{{ .Permalink }}" class="text-brand-accent hover:underline">{{ .Title }}</a></li>
+  {{ end }}
+</ul>
+{{ end }}

@@ -1,5 +1,5 @@
 baseURL = "https://blog.smort.tech/"
-relativeURLs = true
+relativeURLs = false
 languageCode = "en-au"
 title = "Smort Blog"
 

@@ -6,6 +6,7 @@ categories: [Productivity, Teamwork, Communication]
 tags: [Calm Work, Focus, Team Productivity, Knowledge Management]
 featured_image: "/images/posts/calm-communication.png"
 draft: false
+summary: "Calm communication focuses on fewer, clearer messages that protect focus, reduce stress, and improve team collaboration."
 ---
 
 As teams grow and work becomes more distributed, communication multiplies rapidly. Messages arrive throughout the day, notifications appear constantly, and attention gets fragmented across conversations, channels, and tools.

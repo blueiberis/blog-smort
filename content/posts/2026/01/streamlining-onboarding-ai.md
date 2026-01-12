@@ -6,6 +6,8 @@ categories: ["HR", "AI", "Productivity"]
 tags: ["onboarding", "AI tools", "employee engagement", "team efficiency"]
 featured_image: "/images/posts/streamlining-onboarding-ai.png"
 draft: false
+summary: "AI can streamline onboarding by answering common questions instantly, keeping new hires confident and experienced team members focused. Smarter onboarding reduces interruptions and boosts team productivity."
+---
 ---
 
 Onboarding is one of the most critical—and challenging—moments in any organization. Yet, many teams struggle to balance the needs of new hires with the day-to-day responsibilities of experienced employees.  

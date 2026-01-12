@@ -6,6 +6,8 @@ categories: ["Productivity", "AI Tools", "Slack"]
 tags: ["AI", "Slack", "Team Productivity", "Knowledge Management"]
 featured_image: "/images/posts/smort-ai-focus.png"
 draft: false
+summary: "SMORT is an AI for Slack designed to reduce noise, answer repeated questions, and help teams focus. Unlike other tools, it works quietly to protect attention and boost productivity."
+---
 ---
 
 When we started building **SMORT**, we spent time observing how teams actually use Slack every day. What we noticed was simple—but important. Many AI tools promised faster answers and smarter automation, yet instead of helping teams focus, they often added more noise.

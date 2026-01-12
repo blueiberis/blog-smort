@@ -6,6 +6,7 @@ categories: [Productivity, Team Collaboration, Tools]
 tags: [Slack, Knowledge Management, Team Efficiency, SMORT]
 featured_image: "/images/posts/stop-searching-start-doing.png"
 draft: false
+summary: "SMORT delivers answers directly in Slack, eliminating slow searches and tool switching. By reducing friction, it keeps teams focused, accelerates decisions, and boosts productivity."
 ---
 
 Many teams think they have a knowledge problem. The reality? They have an **access problem**.  

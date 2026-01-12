@@ -6,6 +6,7 @@ categories: [Productivity, Team Collaboration, Knowledge Management]
 tags: [knowledge-sharing, team-efficiency, workplace-tools, productivity]
 featured_image: "/images/posts/unite-team-knowledge.png"
 draft: false
+summary: "Fragmented knowledge slows teams down. By centralizing trusted information, teams can reduce repeated questions, ensure accuracy, and boost productivity with a single source of truth."
 ---
 
 As teams grow, information naturally spreads across different tools. Documents live in scattered folders. Answers exist in separate conversations. Over time, knowledge becomes fragmented.

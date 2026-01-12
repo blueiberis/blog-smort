@@ -10,6 +10,7 @@ author: <Author>
 categories: [<Categories>]
 tags: [<Tags>]
 featured_image: "/images/posts/<post-slug>.png"
+summary: <Post Summary>
 draft: false
 ---
 

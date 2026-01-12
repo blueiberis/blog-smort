@@ -1,7 +1,7 @@
 baseURL = "https://blog.smort.tech/"
 relativeURLs = false
 languageCode = "en-au"
-title = "Smort Blog"
+title = "Smort Spark — Igniting Smarter Teams"
 
 [params]
 footerDescription = "Sharing knowledge, tutorials, and insights for tech enthusiasts and professionals."

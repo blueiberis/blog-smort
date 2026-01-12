@@ -6,6 +6,7 @@ categories: ["Productivity", "Team Collaboration", "Slack Tips"]
 tags: ["Slack", "Knowledge Management", "Productivity", "SMORT"]
 featured_image: "/images/posts/repeated-questions-slack.png"
 draft: false
+summary: "Repeated questions in Slack silently drain team productivity. Discover how system-focused tools like SMORT reduce interruptions, protect focus, and help teams work smarter."
 ---
 
 Slack has revolutionized the way teams communicate, but it comes with a hidden cost: repeated questions. When we closely analyzed how teams use Slack, one pattern emerged over and over:

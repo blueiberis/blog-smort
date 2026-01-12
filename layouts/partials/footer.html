@@ -1,15 +1,31 @@
 
 <!-- Newsletter / Subscribe Section -->
-<section class="bg-brand-dark text-brand-white py-16">
-    <div id="subscribe" class="container mx-auto text-center px-6">
-        <h2 class="text-3xl font-bold mb-4">Subscribe to Our Newsletter</h2>
-        <p class="mb-6 text-brand-light">Get the latest posts delivered straight to your inbox.</p>
-        <form name="subscribe" method="POST" data-netlify="true" class="flex flex-col sm:flex-row justify-center gap-4 max-w-xl mx-auto">
-            <input type="email" name="email" placeholder="Your email address" required class="px-4 py-3 rounded w-full sm:flex-1 text-black">
-            <button type="submit" class="bg-brand-mustard text-brand-dark px-6 py-3 rounded font-semibold hover:bg-yellow-400 transition">Subscribe</button>
-        </form>
+<section class="bg-brand-dark text-brand-white pt-16">
+  <div id="subscribe" class="container mx-auto text-center px-6">
+    <!-- Thank You Message -->
+    <div id="thank-you-message" class="hidden text-brand-white text-xl mt-6">
+      Thank you for subscribing!
     </div>
+
+    <iframe
+      width="100%"
+      height="400"
+      src="https://d3b90eb7.sibforms.com/serve/MUIFAEdb4v3ZHey97aZ-3Csx9ie1-l5CfaVQ7fzWsLF1epUq5ct_aiCPiRp2y-ZN8fRD2FQGWJrFDEWtKzO1oWtQxjr6D7T6suIcoPKUIIqdS-h7S6LNw82xu_2hmXqTRljbbyR9KSuKLiY5GL6MYtuq9to73evImw0-WiRkv3aHzOIsnX0Rg1QSX3mDaF2jm1mvAR7YiQvP8k40"
+      frameborder="0"
+      scrolling="auto"
+      allowfullscreen
+      style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"
+    ></iframe>
+  </div>
 </section>
+
+<script>
+  // Check query string for "status=success"
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('status') === 'subscribed') {
+    document.getElementById('thank-you-message').classList.remove('hidden');
+  }
+</script>
 
 <footer class="bg-brand-dark text-brand-white">
   <div class="container mx-auto px-6 py-10 grid md:grid-cols-3 gap-8">

@@ -1,6 +1,6 @@
 ---
 title: "How Teams Can Finally Unite Their Knowledge in One Place"
-date: 2026-01-06
+date: 2026-01-07
 author: "Manikandan Pazhani"
 categories: [Productivity, Team Collaboration, Knowledge Management]
 tags: [knowledge-sharing, team-efficiency, workplace-tools, productivity]
